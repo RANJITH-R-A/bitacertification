@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
 import ContactForm from "@/app/components/ContactForm";
 import Image from "next/image";
 import { CertificationList } from "../util/certificationList";
@@ -10,8 +9,7 @@ import { CertificationList } from "../util/certificationList";
 export default function CertificationPage() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
+ 
   const filteredCertifications = CertificationList.map((category) => ({
     ...category,
     subcategories: category.subcategories
@@ -27,31 +25,10 @@ export default function CertificationPage() {
   })).filter((category) => category.subcategories.length > 0);
 
   return (
-    <div className=" relative flex flex-col md:flex-row h-screen lg:h-auto">
-      {/* Overlay */}
-      {isSidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
-          onClick={() => setIsSidebarOpen(false)}
-        ></div>
-      )}
+    <div className="flex h-auto">
 
-      {/* Sidebar */}
-      <aside
-        className={` absolute md:relative z-50 md:z-10 top-0 left-0 overflow-y-auto h-auto bg-gray-50 shadow-md border-r border-gray-200 py-6 ps-3 pe-2 transition-transform duration-300 ${
-          isSidebarOpen
-            ? "translate-x-0 w-68"
-            : "-translate-x-full md:w-72 md:translate-x-0"
-        }`}
-      >
-        {/* Close Button (Mobile) */}
-        <button
-          className="md:hidden absolute top-4 right-4 bg-red-500 text-themewhite px-3 py-1 rounded-md"
-          onClick={() => setIsSidebarOpen(false)}
-        >
-          <X size={20} />
-        </button>
-
+      {/* aside content */}
+      <aside className={`  bg-gray-50 shadow-md border-r w-72 border-gray-200 py-6 ps-3 pe-2`} >
         <h2 className="text-xl text-themeblue font-bold mb-4">
           Certification Courses
         </h2>
@@ -71,7 +48,6 @@ export default function CertificationPage() {
             }`}
             onClick={() => {
               setSelectedCategory(null);
-              setIsSidebarOpen(false);
             }}
           >
             Show All Certifications
@@ -92,7 +68,6 @@ export default function CertificationPage() {
                           ? null
                           : subcategory.name
                       );
-                      setIsSidebarOpen(false);
                     }}
                   >
                     {subcategory.name}
@@ -107,16 +82,7 @@ export default function CertificationPage() {
 <ContactForm />
 </div>
       </aside>
-
-      {/* Main Content */}
-      {/* Mobile Sidebar Toggle Button */}
-      <button
-        className="flex gap-2 justify-center md:hidden p-2 mx-6 my-1 bg-themeblue text-themewhite rounded-md w-80"
-        onClick={() => setIsSidebarOpen(true)}
-      >
-        <Menu size={24} />
-        All Certification Categories
-      </button>
+{/* main content  */}
       <main className="flex-1 p-4 overflow-y-auto">
         {filteredCertifications.length > 0 ? (
           filteredCertifications.map((category) =>
@@ -142,7 +108,6 @@ export default function CertificationPage() {
                                 width={100}
                                 height={90}
                               />
-                              {/* <img src={item.c_image} alt="Badge" className="w-28 h-28 object-contain" /> */}
                               <div>
                                 <h3 className="font-bold">{item.code}</h3>
                                 <p className="text-sm text-gray-600">
@@ -159,7 +124,7 @@ export default function CertificationPage() {
             )
           )
         ) : (
-          <p className="text-themegray">No certifications found.</p>
+          <p className="text-themegray text-3xl h-full text-center pt-24">No certifications found.</p>
         )}
       </main>
     </div>

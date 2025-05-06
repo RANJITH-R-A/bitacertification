@@ -45,15 +45,6 @@ export default function CertificationPage() {
           });
         });
 
-        // const foundCertification1 = certifications
-        // console.log(foundCertification,'dataset0');
-        // const dataset1 = foundCertification1.flatMap((category) => category.subcategories)
-        // console.log(dataset1,'dataset1');
-        // const dataset2 = dataset1.flatMap((subcategory) => subcategory.items)
-        // console.log(dataset2,'dataset2');
-        // const dataset3 = dataset2.find((item) => item.slug.toLowerCase() === slug.toLowerCase());
-        // console.log(dataset3,'dataset3');
-
         if (!foundCertification) throw new Error("Certification Not Found");
         setCertification(foundCertification);
         if (!selectedCert) throw new Error("No Related Certification");
@@ -74,14 +65,14 @@ export default function CertificationPage() {
   return (
     <div className="pb-20">
       {/* certification banner start */}
-      <section className="bg-[url(/certification_img/certification_banner/cf_banner.png)] bg-cover h-96 relative">
-        <div className="h-full flex justify-around items-center max-md:pt-12 relative">
+      <section className="bg-[url(/certification_img/certification_banner/cf_banner.png)] bg-cover max-md:h-[490px] md:h-96 relative">
+        <div className="h-full flex justify-around items-center max-md:pt-2 relative">
           {certification.c_image && (
             <Image
-              className="absolute bottom-5 right-11 max-md:h-[120px] max-md:w-[110px]  md:static"
+              className="absolute bottom-5 right-11 max-md:h-[100px] max-md:w-[100px]  md:static"
               src={certification.c_image}
               width={250}
-              height={90}
+              height={90  }
               alt={certification.title}
             />
           )}

@@ -44,10 +44,10 @@ export default function Navbar() {
             <Link href="/" className="hover:text-white hover:bg-themeblue transition duration-75 ease-linear px-3 py-1 rounded-xl">Home</Link>
           </li>
           <li>
-            <Link href="/about" className="hover:text-white hover:bg-themeblue transition duration-75 ease-linear px-3 py-1 rounded-xl">About</Link>
+            <Link href="/about" className="hover:text-white hover:bg-themeblue transition duration-75 ease-linear px-3 py-1 rounded-xl">AboutUs</Link>
           </li>
           <li>
-            <Link href="/contactus" className="hover:text-white hover:bg-themeblue transition duration-75 ease-linear px-3 py-1 rounded-xl">Contact</Link>
+            <Link href="/contactus" className="hover:text-white hover:bg-themeblue transition duration-75 ease-linear px-3 py-1 rounded-xl">ContactUs</Link>
           </li>
         </ul>
 

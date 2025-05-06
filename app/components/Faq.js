@@ -10,7 +10,6 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState(null);
 
 const getsyllabus = coursesyllabus.find((item) => item.slug.toLowerCase() === slug.toLowerCase());
-console.log(getsyllabus,'sydata')
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);

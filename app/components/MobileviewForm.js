@@ -11,7 +11,7 @@ export default function DemoFormModal() {
       {/* Button to Open Modal */}
       <button
         onClick={() => setShowForm(true)}
-        className="bg-themeblue text-white px-4 py-2 rounded"
+        className="bg-themeblue text-white px-14 py-2 rounded mx-auto block"
       >
         Certification Enquiry
       </button>

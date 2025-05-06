@@ -11,7 +11,7 @@ export default function MobileviewSlider() {
           {cat.subcategories.map((sub, j) => (
             sub.items?.length > 0 && (
               <div key={j}>
-                <h3 className="text-lg font-semibold text-themeblue">{sub.name}</h3>
+                <h3 className="text-lg font-semibold text-themeblue text-center ">{sub.name}</h3>
                 <Ccs items={sub.items} />
                 {/* <CourseCategorySlider items={sub.items} /> */}
               </div>

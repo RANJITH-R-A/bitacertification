@@ -1,6 +1,7 @@
 import CertificationAll from "@/app/components/CertificationAll"
 import MobileviewForm from "@/app/components/MobileviewForm"
 import MobileviewSlider from "@/app/components/MobileviewSlider"
+import TestimonialSlider from "@/app/components/TestimonialSlider"
 import Image from "next/image";
 
 export const metadata = {
@@ -96,6 +97,13 @@ export default function Home() {
       <MobileviewSlider/>
       </div>
     {/* certification slides mobile view end */}
+
+    {/* testimonial slider mobileview start */}
+     <div className="block lg:hidden">
+     <h2 className="text-themeblue font-bold text-center text-2xl my-5">Testimonials</h2>
+      <TestimonialSlider/>
+     </div>
+    {/* testimonial slider mobileview end */}
 
     {/* certification start  */}
         <div className="my-4 max-lg:hidden block">

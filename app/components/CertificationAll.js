@@ -81,6 +81,55 @@ export default function CertificationPage() {
 <div className="my-10 max-md:hidden">
 <ContactForm />
 </div>
+
+<div className="">
+<h4 className="text-md text-themeblue mb-1">Testimonials</h4>
+<div>
+<Image
+      className="mt-6 mb-20"
+      src="/clientreviews/clientreview1.webp"
+      alt="clientreviewimage1"
+      width={300}
+      height={90}
+/>
+<Image
+      src="/clientreviews/clientreview2.webp"
+      className="my-20"
+      alt="clientreviewimage2"
+      width={300}
+      height={90}
+/>
+<Image
+      src="/clientreviews/clientreview3.webp"
+      className="my-20"
+      alt="clientreviewimage3"
+      width={300}
+      height={90}
+/>
+<Image
+      src="/clientreviews/clientreview4.webp"
+      className="my-20"
+      alt="clientreviewimage4"
+      width={300}
+      height={90}
+/>
+<Image
+      src="/clientreviews/clientreview5.webp"
+      className="my-20"
+      alt="clientreviewimage5"
+      width={300}
+      height={90}
+/>
+<Image
+      src="/clientreviews/clientreview6.webp"
+      className="my-20"
+      alt="clientreviewimage6"
+      width={300}
+      height={90}
+/>
+</div>
+
+</div>
       </aside>
 {/* main content  */}
       <main className="flex-1 p-4 overflow-y-auto">

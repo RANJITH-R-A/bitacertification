@@ -44,7 +44,7 @@ export default function Navbar() {
             <Link href="/" className="hover:text-white hover:bg-themeblue transition duration-75 ease-linear px-3 py-1 rounded-xl">Home</Link>
           </li>
           <li>
-            <Link href="/about" className="hover:text-white hover:bg-themeblue transition duration-75 ease-linear px-3 py-1 rounded-xl">AboutUs</Link>
+            <Link href="/aboutus" className="hover:text-white hover:bg-themeblue transition duration-75 ease-linear px-3 py-1 rounded-xl">AboutUs</Link>
           </li>
           <li>
             <Link href="/contactus" className="hover:text-white hover:bg-themeblue transition duration-75 ease-linear px-3 py-1 rounded-xl">ContactUs</Link>
@@ -71,7 +71,7 @@ export default function Navbar() {
             <Link href="/" className="block hover:text-white hover:bg-themeblue transition duration-75 ease-linear px-3 py-1 rounded-xl" onClick={() => setMenuOpen(false)}>Home</Link>
           </li>
           <li>
-            <Link href="/about" className="block hover:text-white hover:bg-themeblue transition duration-75 ease-linear px-3 py-1 rounded-xl" onClick={() => setMenuOpen(false)}>About</Link>
+            <Link href="/aboutus" className="block hover:text-white hover:bg-themeblue transition duration-75 ease-linear px-3 py-1 rounded-xl" onClick={() => setMenuOpen(false)}>About</Link>
           </li>
           <li>
             <Link href="/contactus" className="block hover:text-white hover:bg-themeblue transition duration-75 ease-linear px-3 py-1 rounded-xl" onClick={() => setMenuOpen(false)}>Contact</Link>

@@ -1,7 +1,31 @@
-"use client";
 import Image from "next/image";
 
-export default function About() {
+export const metadata = {
+    title: "AboutUs | BITA Academy - Best IT Certification in Chennai",
+    description: "BITA Academy-SHAPING THE FUTURE OF IT PROFESSIONALS FOR15 STRONG YEARS",
+    robots: {
+      index: true,
+      follow: true,
+      nocache: false,
+    },
+    alternates: {
+      canonical: "https://certificationtraining.in/aboutus",
+    },
+    openGraph: {
+      title: "AboutUs | BITA Academy - Best IT Certification in Chennai",
+      description: "BITA Academy-SHAPING THE FUTURE OF IT PROFESSIONALS FOR15 STRONG YEARS",
+      url: "https://certificationtraining.in/aboutus",
+      siteName: "Certification Training",
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title: "AboutUs | BITA Academy - Best IT Certification in Chennai",
+      description: "BITA Academy-SHAPING THE FUTURE OF IT PROFESSIONALS FOR15 STRONG YEARS",
+    },
+  };
+
+export default function AboutUs() {
 const whybita = [
     {
     whychoosebitaheading : "Industry Proficient Instructors",

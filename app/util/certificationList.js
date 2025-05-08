@@ -38,7 +38,7 @@ export const CertificationList = [
             code: "PCAT",
             slug: "pcatonlinecourse",
             title: "Certified Associate Tester with Python",
-            c_image: "/certification_img/python_logo/PCAT.webp",
+            c_image: "/certification_img/python_logo/PCAT.webp",  
           },
         ],
       },
@@ -280,7 +280,7 @@ export const CertificationList = [
         items: [
           {
             code: "GISP",
-            slug: "giacinformationsecurityfundamentalscertification",
+            slug: "giacinformationsecurityProfessionalcertification",
             title: "GIAC Information Security Professional",
             c_image: "/certification_img/giac_logo/gisp.webp",
           },

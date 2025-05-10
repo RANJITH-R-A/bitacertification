@@ -45,25 +45,9 @@ export async function generateMetadata({ params }) {
 
 
 export default function Certification() {
-      //  <script
-      //           type="application/ld+json"
-      //     dangerouslySetInnerHTML={{
-      //               __html: JSON.stringify({
-      //               "@context": "https://schema.org",
-      //               "@type": "Course",
-      //               "name": `${seodata.metatitle}`,
-      //               "description": `${seodata.metadescription}`,
-      //               "provider": {
-      //                   "@type": "Organization",
-      //                   "name": "BITA Academy",
-      //                   "url": `https://certificationtraining.in/certifications/${slug}`
-      //           }
-      //         }),
-      //     }}
-      // /> 
   return(
     <>
-     <CertificationPage/>
+     <CertificationPage data={seodata}/>
     </>
   )
 

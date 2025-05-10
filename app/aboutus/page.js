@@ -22,6 +22,7 @@ export const metadata = {
       card: "summary",
       title: "AboutUs | BITA Academy - Best IT Certification in Chennai",
       description: "BITA Academy-SHAPING THE FUTURE OF IT PROFESSIONALS FOR15 STRONG YEARS",
+      images: ["https://certificationtraining.in/bitalogo.png"],
     },
   };
 

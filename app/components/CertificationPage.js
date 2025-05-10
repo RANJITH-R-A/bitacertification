@@ -8,7 +8,8 @@ import AboutExam from "@/app/components/AboutExam";
 import Image from "next/image";
 import { CertificationList } from "@/app/util/certificationList";
 
-export default function CertificationPage() {
+
+export default function CertificationPage({data}) {
   const { slug } = useParams();
   const [certification, setCertification] = useState(null);
   const [relatedCerts, setRelatedCerts] = useState([]);
@@ -62,7 +63,20 @@ export default function CertificationPage() {
   if (loading) return <h1>Loading...</h1>;
   if (error) return <h1>{error}</h1>;
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: data.title,
+    description: data.description,
+    provider: {
+      "@type": "Organization",
+      name: "BITA Academy",
+      url: "https://certificationtraining.in",
+    },
+  };
+
   return (
+    <>
     <div className="pb-20">
       {/* certification banner start */}
       <section className="bg-[url(/certification_img/certification_banner/cf_banner.png)] bg-cover max-md:h-[490px] md:h-96 relative">
@@ -124,5 +138,11 @@ export default function CertificationPage() {
       </section>
       {/* related course end  */}
     </div>
+
+          <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+         />
+       </>
   );
 }

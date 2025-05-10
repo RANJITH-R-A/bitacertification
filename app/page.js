@@ -21,11 +21,20 @@ export const metadata = {
     url: "https://certificationtraining.in/",
     siteName: "Certification Trainings",
     type: "website",
+    images: [
+      {
+        url: "https://certificationtraining.in/bitalogo.png",
+        width: 1200,
+        height: 630,
+        alt: "BITA IT Academy",
+      },
+    ],
   },
   twitter: {
     card: "summary",
     title: "BITA Academy - Best IT Certification in Chennai",
     description: "BITA Academy-Best IT Training institute in chennai. Enquire for course fee and schedule a free demo. Call +91 95660 04626 for more details.",
+    images: ["https://certificationtraining.in/bitalogo.png"],
   },
 };
 
